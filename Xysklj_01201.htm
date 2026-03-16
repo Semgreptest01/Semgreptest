@@ -1,0 +1,101 @@
+<HTML xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<META http-equiv="Content-Style-Type" content="text/css">
+<STYLE TYPE="text/css">
+<!--
+ TD{font-size=9pt;}
+ INPUT{ime-mode:inactive;text-align="left";}
+ INPUT.ON_RIGHT{ime-mode:active;text-align="right";}
+ INPUT.OF_RIGHT{ime-mode:inactive;text-align="right";}
+ INPUT.ON_LEFT{ime-mode:active;text-align="left";}
+ INPUT.OF_LEFT{ime-mode:inactive;text-align="left";}
+ TEXTAREA{ime-mode:active;font-size=8pt;overflow:auto;}
+ INPUT.BUTTON{width:5EM; font-size=10pt; text-align:center; 'ＭＳゴシック';height=20;}
+ INPUT.DATE_BUTTON{width:1.5EM; font-size=8pt; text-align:center; 'ＭＳゴシック';height=20;}
+-->
+</STYLE>
+<title>ＭＳＩ　システム</title>
+<SCRIPT language="JavaScript" src="../common/common.js"></SCRIPT>
+<SCRIPT language="JavaScript">
+<!--
+// ************************
+// *** Ctrl+Nキー禁止対応
+// ************************
+	$submit_sw = "0";			// 送信中 SWITCH OFF
+	Ctrl_Detect();				// Ctrlキー・禁止
+function Ctrl_Detect(){
+	document.onkeydown=keydown;
+	if(document.layers)document.captureEvents(Event.KEYDOWN)
+}
+function keydown(e) {
+	//--キ−コ−ドを文字に直す
+	var keyName=String.fromCharCode(getKEYCODE(e))
+	var char_code = escape( keyName );
+	if (event.ctrlKey){
+		if (char_code == "N") {
+			alert("Ctrl+N は使用できません。");
+			return false;
+		}
+	}
+}
+function getKEYCODE(e){
+	//--押されたキ−コ−ドを返す
+	if(document.layers) return e.which
+	if(document.all)	return event.keyCode
+} 
+// ****************
+// *** 初期処理
+// ****************
+function initial() {
+	focus();					// 自画面へフォーカス
+	resizeTo(600,600);			// 画面初期表示リサイズ
+	self.moveTo(0,0);			// Window 位置を0,0へ移動
+}
+// -->
+</SCRIPT>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:xd_Signature msdt:dt="string"></mso:xd_Signature>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">中村 康弘 プロジェクト推進部</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">789900.000000000</mso:Order>
+<mso:xd_ProgID msdt:dt="string"></mso:xd_ProgID>
+<mso:_ExtendedDescription msdt:dt="string"></mso:_ExtendedDescription>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">中村 康弘 プロジェクト推進部</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ComplianceAssetId msdt:dt="string"></mso:ComplianceAssetId>
+<mso:TemplateUrl msdt:dt="string"></mso:TemplateUrl>
+<mso:ContentTypeId msdt:dt="string">0x01010018294BF72EF43F499456AC82D6642321</mso:ContentTypeId>
+<mso:TriggerFlowInfo msdt:dt="string"></mso:TriggerFlowInfo>
+<mso:_SourceUrl msdt:dt="string"></mso:_SourceUrl>
+<mso:_SharedFileIndex msdt:dt="string"></mso:_SharedFileIndex>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<BODY topmargin="1" leftmargin="20" onload="initial();" bgcolor="#FFFACD" scroll="yes"
+ oncontextmenu="return false"><!-- *** 本番時は、左記の記述を上記BODYタグに追加すること *** -->
+<form name="form1">
+<TABLE border="0" cellpadding="0" cellspacing="0" width="500" style="table-layout:fixed">
+<COL WIDTH="300"><COL WIDTH="200">
+<TBODY>
+<TR>
+<TD align="right"></TD>
+<TD align="right"><INPUT type="button" name="exit_button"
+ onclick="top.close();" class="BUTTON" value="戻る"></TD>
+</TR>
+<TR>
+<TD>
+  <TABLE border="1" cellpadding="0" cellspacing="0" width="240" style="table-layout:fixed">
+  <TBODY>
+  <TR><TD>１２０　出版社-発行形態</TD></TR>
+  </TBODY>
+  </TABLE>
+</TD>
+<TD>２００１　ローソン　MSI-010-190</TD>
+</TR>
+<TR><TD COLSPAN="2"><BR><HR><BR><CENTER>ヘルプファイルは、準備中です。</CENTER><BR><HR></TD></TR>
+</TBODY>
+</TABLE>
+</form>
+</body>
+</html>

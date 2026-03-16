@@ -1,0 +1,153 @@
+<HTML xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<META http-equiv="Content-Style-Type" content="text/css">
+<STYLE TYPE="text/css">
+<!--
+ TD{font-size=9pt;}
+ INPUT{ime-mode:inactive;text-align="left";}
+ INPUT.ON_RIGHT{ime-mode:active;text-align="right";}
+ INPUT.OF_RIGHT{ime-mode:inactive;text-align="right";}
+ INPUT.ON_LEFT{ime-mode:active;text-align="left";}
+ INPUT.OF_LEFT{ime-mode:inactive;text-align="left";}
+ TEXTAREA{ime-mode:active;font-size=8pt;overflow:auto;}
+ INPUT.BUTTON{width:5EM; font-size=10pt; text-align:center; 'ＭＳゴシック';height=20;}
+ INPUT.DATE_BUTTON{width:1.5EM; font-size=8pt; text-align:center; 'ＭＳゴシック';height=20;}
+-->
+</STYLE>
+<title>出版物管理システム</title>
+<SCRIPT language="JavaScript" src="../common/common.js"></SCRIPT>
+<SCRIPT language="JavaScript">
+<!--
+// ************************
+// *** Ctrl+Nキー禁止対応
+// ************************
+	$submit_sw = "0";			// 送信中 SWITCH OFF
+	Ctrl_Detect();				// Ctrlキー・禁止
+function Ctrl_Detect(){
+	document.onkeydown=keydown;
+	if(document.layers)document.captureEvents(Event.KEYDOWN)
+}
+function keydown(e) {
+	//--キ−コ−ドを文字に直す
+	var keyName=String.fromCharCode(getKEYCODE(e))
+	var char_code = escape( keyName );
+	if (event.ctrlKey){
+		if (char_code == "N") {
+			alert("Ctrl+N は使用できません。");
+			return false;
+		}
+	}
+}
+function getKEYCODE(e){
+	//--押されたキ−コ−ドを返す
+	if(document.layers) return e.which
+	if(document.all)	return event.keyCode
+} 
+// ****************
+// *** 初期処理
+// ****************
+function initial() {
+	focus();					// 自画面へフォーカス
+	resizeTo(600,600);			// 画面初期表示リサイズ
+	self.moveTo(0,0);			// Window 位置を0,0へ移動
+}
+// -->
+</SCRIPT>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:xd_Signature msdt:dt="string"></mso:xd_Signature>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">中村 康弘 プロジェクト推進部</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">790200.000000000</mso:Order>
+<mso:xd_ProgID msdt:dt="string"></mso:xd_ProgID>
+<mso:_ExtendedDescription msdt:dt="string"></mso:_ExtendedDescription>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">中村 康弘 プロジェクト推進部</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ComplianceAssetId msdt:dt="string"></mso:ComplianceAssetId>
+<mso:TemplateUrl msdt:dt="string"></mso:TemplateUrl>
+<mso:ContentTypeId msdt:dt="string">0x01010018294BF72EF43F499456AC82D6642321</mso:ContentTypeId>
+<mso:TriggerFlowInfo msdt:dt="string"></mso:TriggerFlowInfo>
+<mso:_SourceUrl msdt:dt="string"></mso:_SourceUrl>
+<mso:_SharedFileIndex msdt:dt="string"></mso:_SharedFileIndex>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<BODY topmargin="1" leftmargin="20" onload="initial();" bgcolor="#FFFACD" scroll="yes"
+ oncontextmenu="return false"><!-- *** 本番時は、左記の記述を上記BODYタグに追加すること *** -->
+<form name="form1">
+<TABLE border="0" cellpadding="0" cellspacing="0" width="500" style="table-layout:fixed">
+<COL WIDTH="300"><COL WIDTH="200">
+<TBODY>
+<TR>
+<TD align="right"></TD>
+<TD align="right"><INPUT type="button" name="exit_button"
+ onclick="top.close();" class="BUTTON" value="戻る"></TD>
+</TR>
+<TR>
+<TD>
+  <TABLE border="1" cellpadding="0" cellspacing="0" width="280" style="table-layout:fixed">
+  <TBODY>
+  <TR><TD>２３０ 新聞・競馬新聞実績照会（新聞社-商品（全国））</TD></TR>
+  </TBODY>
+  </TABLE>
+</TD>
+<TD></TD>
+</TR>
+<TR><TD COLSPAN="2"><BR>
+<HR>
+<pre>
+□ 基本機能
+　この画面では、指定した新聞社の新聞・競馬新聞全商品の全国販売実績を、
+　前日より１４日間分、商品別に確認することができます。
+　・即売取引様は、取り扱っている新聞社の販売実績を確認することができます。
+　・新聞社様は、自社の販売実績を確認することができます。
+
+□ 表示対象範囲
+   １．表示項目・・・選択条件の組み合わせにより、表示項目を選択できます。
+     　  ｢項目｣指定：仕入数・販売数・販売率・配本店・売切店数・売切店発生率・
+　　　　 　　　　　　返品数・欠品数・仕入ＰＳＡ・販売ＰＳＡを表示します。
+       　｢１行目｣｢２行目｣｢３行目｣指定：
+　　　 　　　　　　　仕入数・販売数・販売率・配本店・売切店数・売切店発生率・
+　　　 　　　　　　　返品数・欠品数・仕入ＰＳＡ・販売ＰＳＡのいずれかを指定する
+　　　 　　　　　　　ことができます。
+　 ２．新聞社選択・・検索対象の新聞社を指定します。
+                   （新聞社が、検索する場合は自社のみ選択可能になります。）
+
+□ 照会可能時間
+　 [ローソン]
+　　（月曜日〜土曜日）
+　　　利用できる時間帯は、１０時００分から２２時００分までです。前日までの集計
+      データが確認できます。
+　　（日曜日）
+　　　利用できる時間帯は、１３時３０分から２２時００分までです。前日までの集計
+      データが確認できます。
+　 [取引先様、新聞社様]
+　　（月曜日〜土曜日）
+　　　利用できる時間帯は、１０時００分から１８時００分までです。前日までの集計
+      データが確認できます。
+　　（日曜日）
+　　　利用できる時間帯は、１３時３０分から１８時００分までです。前日までの集計
+      データが確認できます。
+
+□ 表示項目
+　１．仕入数・・・・・店舗実績の積上げ数
+　２．販売数・・・・・店舗実績の積上げ数
+　３．販売率・・・・・販売数÷仕入数×１００(小数点２位）
+　４．配本店・・・・・仕入実績ありの店舗数
+　５．売切店数・・・・販売数≧仕入数の店舗数
+　６．売切店発生率・・売切店数÷配本店Ｘ１００(小数点２位）
+　７．返品数・・・・・店舗実績の積上げ数
+　８．欠品数・・・・・店舗実績の積上げ数
+　９．仕入ＰＳＡ・・・仕入数÷配本店(小数点２位）
+１０．販売ＰＳＡ・・・販売数÷配本店(小数点２位）
+
+□ ダウンロード機能
+　・ダウンロードボタンを押下することで、ｃｓｖファイルにダウンロードすることが
+　　可能です。(Xysk2301.csv)
+</pre>
+</TD></TR>
+</TBODY>
+</TABLE>
+</form>
+</body>
+</html>

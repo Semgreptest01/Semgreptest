@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=EUC-JP" %>
 <%@ page import="java.lang.*" %>
 <%@ page import="java.util.*" %>
-<%@ page import="xysk.Xysflj_Common" %>
+<%@ page import="xykj.Xysflj_Common" %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <!--
